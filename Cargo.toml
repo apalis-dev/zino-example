@@ -1,0 +1,17 @@
+[package]
+name = "zino-example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+zino = { git = "https://github.com/zino-rs/zino.git", features = ["axum"] }
+zino-core = { git = "https://github.com/zino-rs/zino.git", features = [
+    "apalis",
+] }
+apalis = { version = "0.6.2", features = ["catch-panic", "retry", "limit"] }
+apalis-cron = { version = "0.6.2" }
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+
+[dependencies.tracing]
+default-features = false
+version = "0.1"
